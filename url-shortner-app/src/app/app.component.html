@@ -1,0 +1,16 @@
+<div class="url-form">
+  <mat-card>
+    <mat-card-header>
+      <h1>{{title}}</h1>
+    </mat-card-header>
+    <mat-card-content>
+        <mat-form-field class="long-url"
+          appearance="outline">
+          <mat-label>Enter Url</mat-label>
+          <input matInput  [formControl]="longUrl" placeholder="Paste Long url here" (keyup.enter)="fetchUrl()">
+        </mat-form-field>
+
+      <p *ngIf="shortUrl">Your short url is <a href="{{shortUrl.actualUrl}}">{{shortUrl.shortUrl}}</a></p>
+    </mat-card-content>
+  </mat-card>
+</div>

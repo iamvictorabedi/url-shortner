@@ -1,0 +1,32 @@
+This application is short simple,
+Built on angular 7
+
+To run the application:
+1. Intsall node 8 + (or from stable version) https://nodejs.org/en/download/
+2. Install angular cli ( npm install -g @angular/cli )
+3. clone repo 
+4. cd 
+5. run npm install to then ng serve
+6. to test in a separate termial but same directory run ng test
+
+The application has two functions
+1. fetchUrl: which gets the catured long url form the template (form) and initiates a request to generate shortened url as a
+   5 string random string.(For perfomance instead of fetching resultdirectly from the db, we can implement a cache memory to check if url is available there 
+   , if not load data from the db)
+2. generateShortUrl: which generates the 5 random strings value and appends it to the host url whose value is presentd to the user
+       as the shortned url
+       
+
+When the shortened url is clicked the user is redirected to the long url on the same browser screen
+
+
+
+To make or improve this application for scalability:
+1. I Would have created a backend api which generates a randoms 5 - 8 string, get the long url and store this to values(encoded) in a db with coloums (long-url and short-url)
+   then retun this values (decoded) as part of the response i.e
+   {longUrl: https://dev.to/avatsaev/simple-state-management-in-angular-with-only-services-and-rxjs-41p8,
+    shorrUrl: (nameofmyapplication_host)/1JHA2
+    }
+    
+ 2. Implemeted a frontend where i can capture the long url then return the shortned version with  a redirct function when clicked
+ 3. Deploy both version to some secure url and open it up to the public
