@@ -5,7 +5,7 @@ To run the application:
 1. Intsall node 8 + (or from stable version) https://nodejs.org/en/download/
 2. Install angular cli ( npm install -g @angular/cli )
 3. clone repo 
-4. cd 
+4. cd url-shortner-app
 5. run npm install to then ng serve
 6. to test in a separate termial but same directory run ng test
 
